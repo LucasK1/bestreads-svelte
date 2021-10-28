@@ -10,6 +10,7 @@ specifiers:
   eslint-plugin-svelte3: ^3.2.1
   prettier: ^2.4.1
   prettier-plugin-svelte: ^2.4.0
+  sass: ^1.43.4
   svelte: ^3.42.6
   svelte-check: ^2.2.6
   svelte-preprocess: ^4.9.4
@@ -20,7 +21,7 @@ dependencies:
   axios: 0.24.0
 
 devDependencies:
-  '@sveltejs/kit': 1.0.0-next.191_svelte@3.44.0
+  '@sveltejs/kit': 1.0.0-next.191_sass@1.43.4+svelte@3.44.0
   '@typescript-eslint/eslint-plugin': 4.33.0_cc617358c89d3f38c52462f6d809db4c
   '@typescript-eslint/parser': 4.33.0_eslint@7.32.0+typescript@4.4.4
   eslint: 7.32.0
@@ -28,9 +29,10 @@ devDependencies:
   eslint-plugin-svelte3: 3.2.1_eslint@7.32.0+svelte@3.44.0
   prettier: 2.4.1
   prettier-plugin-svelte: 2.4.0_prettier@2.4.1+svelte@3.44.0
+  sass: 1.43.4
   svelte: 3.44.0
-  svelte-check: 2.2.7_svelte@3.44.0
-  svelte-preprocess: 4.9.8_svelte@3.44.0+typescript@4.4.4
+  svelte-check: 2.2.7_sass@1.43.4+svelte@3.44.0
+  svelte-preprocess: 4.9.8_6ba272a19f25882364144d6c13dea9c6
   tslib: 2.3.1
   typescript: 4.4.4
 
@@ -117,7 +119,7 @@ packages:
       picomatch: 2.3.0
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.191_svelte@3.44.0:
+  /@sveltejs/kit/1.0.0-next.191_sass@1.43.4+svelte@3.44.0:
     resolution: {integrity: sha512-ikFKdgr0vcQB5lYqRtj6MUH4yu65le+qNVKxjJOK/Qj7Ev8IjaFKwiX1ppO48X5vJPsW+qAwvk/TqJwSM6VPDA==}
     engines: {node: '>=14.13'}
     hasBin: true
@@ -128,7 +130,7 @@ packages:
       cheap-watch: 1.0.4
       sade: 1.7.4
       svelte: 3.44.0
-      vite: 2.6.13
+      vite: 2.6.13_sass@1.43.4
     transitivePeerDependencies:
       - diff-match-patch
       - less
@@ -155,7 +157,7 @@ packages:
       require-relative: 0.8.7
       svelte: 3.44.0
       svelte-hmr: 0.14.7_svelte@3.44.0
-      vite: 2.6.13
+      vite: 2.6.13_sass@1.43.4
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1363,6 +1365,14 @@ packages:
       rimraf: 2.7.1
     dev: true
 
+  /sass/1.43.4:
+    resolution: {integrity: sha512-/ptG7KE9lxpGSYiXn7Ar+lKOv37xfWsZRtFYal2QHNigyVQDx685VFT/h7ejVr+R8w7H4tmUgtulsKl5YpveOg==}
+    engines: {node: '>=8.9.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.2
+    dev: true
+
   /semver/7.3.5:
     resolution: {integrity: sha512-PoeGJYh8HK4BTO/a9Tf6ZG3veo/A7ZVsYrSA6J8ny9nb3B1VrpkuN+z9OE5wfE5p6H4LchYZsegiQgbJD94ZFQ==}
     engines: {node: '>=10'}
@@ -1467,7 +1477,7 @@ packages:
       has-flag: 4.0.0
     dev: true
 
-  /svelte-check/2.2.7_svelte@3.44.0:
+  /svelte-check/2.2.7_sass@1.43.4+svelte@3.44.0:
     resolution: {integrity: sha512-lH8ArmwVC+D314cToZkXBBfj7NlpvgQGP7nXCAMnNHo6hTEcbKcf/cAZgzbnAOTftjIJrmLHp+EDW887VJFSOQ==}
     hasBin: true
     peerDependencies:
@@ -1481,7 +1491,7 @@ packages:
       sade: 1.7.4
       source-map: 0.7.3
       svelte: 3.44.0
-      svelte-preprocess: 4.9.8_svelte@3.44.0+typescript@4.4.4
+      svelte-preprocess: 4.9.8_6ba272a19f25882364144d6c13dea9c6
       typescript: 4.4.4
     transitivePeerDependencies:
       - '@babel/core'
@@ -1504,7 +1514,7 @@ packages:
       svelte: 3.44.0
     dev: true
 
-  /svelte-preprocess/4.9.8_svelte@3.44.0+typescript@4.4.4:
+  /svelte-preprocess/4.9.8_6ba272a19f25882364144d6c13dea9c6:
     resolution: {integrity: sha512-EQS/oRZzMtYdAprppZxY3HcysKh11w54MgA63ybtL+TAZ4hVqYOnhw41JVJjWN9dhPnNjjLzvbZ2tMhTsla1Og==}
     engines: {node: '>= 9.11.2'}
     requiresBuild: true
@@ -1549,6 +1559,7 @@ packages:
       '@types/sass': 1.16.1
       detect-indent: 6.1.0
       magic-string: 0.25.7
+      sass: 1.43.4
       sorcery: 0.10.0
       strip-indent: 3.0.0
       svelte: 3.44.0
@@ -1629,7 +1640,7 @@ packages:
     resolution: {integrity: sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==}
     dev: true
 
-  /vite/2.6.13:
+  /vite/2.6.13_sass@1.43.4:
     resolution: {integrity: sha512-+tGZ1OxozRirTudl4M3N3UTNJOlxdVo/qBl2IlDEy/ZpTFcskp+k5ncNjayR3bRYTCbqSOFz2JWGN1UmuDMScA==}
     engines: {node: '>=12.2.0'}
     hasBin: true
@@ -1649,6 +1660,7 @@ packages:
       postcss: 8.3.11
       resolve: 1.20.0
       rollup: 2.58.3
+      sass: 1.43.4
     optionalDependencies:
       fsevents: 2.3.2
     dev: true

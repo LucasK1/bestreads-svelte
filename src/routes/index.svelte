@@ -34,11 +34,9 @@
 		{#await promise}
 			<div class="spinner-container">Loading...</div>
 		{:then books}
-			{#each books as book}
-				<div class="searchedBooks-container">
-					<SearchedBooks {books} />
-				</div>
-			{/each}
+			<div class="searchedBooks-container">
+				<SearchedBooks {books} />
+			</div>
 		{:catch err}
 			<p>{err}</p>
 		{/await}

@@ -24,7 +24,7 @@
 	{/if}
 </section>
 
-<style>
+<style lang="scss">
 	section {
 		/* height: 100%; */
 		max-width: 1200px;
@@ -42,15 +42,15 @@
 		box-shadow: 2px 2px 20px #ccc;
 		position: relative;
 		z-index: 280;
+
+		&:hover {
+			transform: scale(1.2);
+			transition: transform 300ms;
+			transition-delay: 30ms;
+			cursor: pointer;
+		}
 	}
 
-	.book-cover:hover,
-	.no-cover:hover {
-		transform: scale(1.2);
-		transition: transform 300ms;
-		transition-delay: 30ms;
-		cursor: pointer;
-	}
 
 	.no-cover {
 		display: inline-block;
