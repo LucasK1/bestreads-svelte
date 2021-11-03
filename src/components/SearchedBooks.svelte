@@ -8,6 +8,7 @@
 	{#if books.length > 0}
 		{#each books as { id, volumeInfo } (id)}
 			<!-- Link -->
+			<a href={`/book/${id}`}>
 			{#if !!volumeInfo.imageLinks}
 				<img class="book-cover" src={volumeInfo.imageLinks.smallThumbnail} alt="" />
 			{:else}
@@ -18,6 +19,7 @@
 					{/if}
 				</div>
 			{/if}
+		</a>
 		{/each}
 	{:else}
 		<p>Nothing found</p>

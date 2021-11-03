@@ -22,11 +22,16 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Bestreads</title>
+</svelte:head>
+
+<div class="wrapper">
+<header>
+	<h1>Bestreads</h1>
+	<h2>This will be your best alternative to THE OTHER site</h2>
+</header>
 <main>
-	<header>
-		<h1>Welcome to Bestreads!</h1>
-		<h2>This will be your best alternative to THE OTHER site</h2>
-	</header>
 	<form on:submit|preventDefault={onSubmit}>
 		<input type="text" placeholder="Search for books..." bind:value={input} />
 	</form>
@@ -42,34 +47,26 @@
 		{/await}
 	{/if}
 </main>
+</div>
 
 <style>
-	main {
-		padding-top: 8vh;
-		height: 92vh;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		background: url('/1.jpg') no-repeat center;
-		background-size: cover;
+	.wrapper {
+		background-color: #f8f5f2;
+		min-height: 100vh;
 	}
 
 	header {
-		color: #fff;
-		height: 20vh;
-		text-align: center;
+		color: #232323;
+		text-align: left;
 	}
 
 	h1 {
-		font-size: 4rem;
-		line-height: 1rem;
+		margin:  0;
+		font-size: 3rem;
 	}
 
 	h2 {
 		font-size: 2rem;
-		line-height: 1rem;
 	}
 
 	input {

@@ -1,6 +1,7 @@
 <script lang="ts" context="module">
 	import type { Load } from '@sveltejs/kit';
 	import type { Book } from 'src/types/book.interfaces';
+	import BookTemplate from '../../components/BookTemplate.svelte';
 
 	export const load: Load = async ({ page, fetch }) => {
 		const { id } = page.params;
@@ -26,7 +27,7 @@
 	export let book: Book;
 </script>
 
-<p>{book.volumeInfo.title}</p>
+<BookTemplate {book} />
 
 <style>
 </style>
